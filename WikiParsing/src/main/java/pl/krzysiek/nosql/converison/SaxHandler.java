@@ -47,12 +47,13 @@ public class SaxHandler extends DefaultHandler {
             Pushing node names to stack so we can check if page id is in the right place
         */
         this.elementsStack.push(qName);
+
         buf = new StringBuilder();
 
         /*
             Marking matching nodes
          */
-        if("id".equals(qName) && !elementsStack.contains("revision")){
+        if("id".equals(qName) && (!elementsStack.contains("revision")) ){
             id = true;
         }
 
@@ -70,7 +71,6 @@ public class SaxHandler extends DefaultHandler {
             is outputted at the end of element as a whole
          */
         if(text){
-            //System.out.println(buf);
             fileWriter.appendToFile(buf.toString(), true);
         }
 

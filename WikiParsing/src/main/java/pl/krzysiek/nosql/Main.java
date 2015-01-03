@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args){
         long currentTime = System.currentTimeMillis();
         try {
-            SaxConverter c = new SaxConverter("/home/krzysiek/Desktop/wikiCleaned.xml","/home/krzysiek/Desktop/wikipedia.csv" );
+            SaxConverter c = new SaxConverter("/home/krzysiek/Desktop/TESTINGDMP.xml","/home/krzysiek/Desktop/testingSample.csv" );
         }catch (FileNotFoundException f){
             System.out.println("File not found: " + f.getMessage());
         }catch (Exception ex){
