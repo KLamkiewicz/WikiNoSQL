@@ -15,7 +15,7 @@ if(err) throw err;
 		};
 
 		var finalize = function(key, value){
-			return (value.length/key.length)>1?value:"No anagram";
+			return (value.length/key.length)>1?value:"Single: "+value;
 		};
 
 		col.mapReduce(map, reduce, {
