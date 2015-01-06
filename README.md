@@ -25,6 +25,8 @@ Wyszukanie wszystkich anagramów w pliku z [anagramami](http://wbzyl.inf.ug.edu.
 
 ![mapreduceanagram](https://github.com/KLamkiewicz/WikiNoSQL/blob/master/Screenshots/Anagrams/mapreduce.png)
 
+Liczba anagramów: 914
+
 ######Anagramy:
 Przykładowe anagramy:
 
@@ -32,8 +34,15 @@ Przykładowe anagramy:
 
 ###b) Wikipedia
 
-Wyszukaj najczęściej występujące słowa z Wikipedia data PL. Plik jaki pobrałem to zrzut z [09-12-2014](http://dumps.wikimedia.org/plwiki/20141209/). Aby móc zaimportować artykuły do bazy MongoDB najpierw przerobiłem pobrany plik w formacie xml(skompresowany bzip2) do formatu CSV z polami "id" artykułu i "text" czyli treść artykułu. Dokonałem tego przy użyci SAX dla Javy, który nie wczytuje całego pliku xml, a jedynie sekwencyjnie go parsuje. Przed zapisaniem artykułu do pliku jest on ponownie parsowany, tym razem oczyszczam go ze wszelkich niezbędnych znaków.
+Wyszukaj najczęściej występujące słowa z Wikipedia data PL. 
+
+Plik jaki pobrałem to zrzut z [09-12-2014](http://dumps.wikimedia.org/plwiki/20141209/). Aby móc zaimportować artykuły do bazy MongoDB najpierw przerobiłem pobrany plik w formacie xml(skompresowany bzip2) do formatu CSV z polami "id" artykułu i "text" czyli treść artykułu. Dokonałem tego przy użyci SAX dla Javy, który nie wczytuje całego pliku xml, a jedynie sekwencyjnie go parsuje. Przed zapisaniem artykułu do pliku jest on ponownie parsowany, tym razem oczyszczam go ze wszelkich niezbędnych znaków.
 
 [Kod programu](https://github.com/KLamkiewicz/WikiNoSQL/tree/master/WikiParsing/src/main/java/pl/krzysiek/nosql).
 
+#####Parsowanie:
 
+#####Import:
+
+#####MapReduce:
+[Kod](https://github.com/KLamkiewicz/WikiNoSQL/blob/master/Anagrams/wikipediaMapReduce.js)
