@@ -9,7 +9,7 @@ if(err) throw err;
 // jsMode: true
 
 		var map = function(){
-			var words = this.text.split(" ");
+			var words = this.text.split(/\s+/);
 			words.forEach(function(key){
 					emit(key, key);
 			});
