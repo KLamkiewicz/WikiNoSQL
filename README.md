@@ -13,7 +13,7 @@ ____
 
 ###a) Anagramy
 
-	Wyszukanie wszystkich anagramów w pliku z [anagramami](https://github.com/KLamkiewicz/WikiNoSQL/blob/master/Anagrams/words.csv)
+Wyszukanie wszystkich anagramów w pliku z [anagramami](http://wbzyl.inf.ug.edu.pl/nosql/doc/data/word_list.txt)
 
 
 #####Import:
