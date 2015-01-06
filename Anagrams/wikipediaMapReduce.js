@@ -1,10 +1,10 @@
 var MongoClient = require('mongodb').MongoClient
 , format = require('util').format;
 
-MongoClient.connect('mongodb://127.0.0.1:27017/Mini', {db: {native_parser: true}}, function(err, db) {
+MongoClient.connect('mongodb://127.0.0.1:27017/CleanWiki', {db: {native_parser: true}}, function(err, db) {
 if(err) throw err;
 
-	db.collection('mini', function(err, col){
+	db.collection('Articles', function(err, col){
 		
 		var map = function(){
 			var words = this.text.split(/\s+/);
